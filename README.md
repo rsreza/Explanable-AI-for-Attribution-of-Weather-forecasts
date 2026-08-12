@@ -20,7 +20,7 @@ This code accompanies our paper: "Comparative Analysis of Explainable AI Methods
 - **6 XAI Methods** implemented: Finite Difference, SmoothGrad, Input×Gradient, Integrated Gradients, Occlusion Sensitivity, and Gradient SHAP
 - **Multi-perspective Analysis**: Variable importance, regional sensitivity, physical mechanism analysis, and vertical profiling
 - **Cross-method Comparison**: Correlation analysis, consensus identification, and statistical significance testing
-- **Visualizations**: Publication-quality plots with consistent styling
+- **Visualizations**: plots with consistent styling
 - **Comprehensive Outputs**: JSON summaries, CSV exports, and Markdown reports
 - **GPU Optimized**: CUDA support for fast computations (tested on NVIDIA A100 80GB)
 
