@@ -298,12 +298,6 @@ We specifically thank them for:
 
 The official FengWu repository can be found at: [https://github.com/OpenEarthLab/FengWu](https://github.com/OpenEarthLab/FengWu)
 
-We also acknowledge the FengWu team for providing:
-- **Model Download Links**: Both fengwu_v1.onnx and fengwu_v2.onnx available through OneDrive
-- **Sample Input Data**: Available through Google Drive for testing and evaluation
-- **Comprehensive Documentation**: Data format, model specifications, and usage instructions
-- **Technical Support**: Through their GitHub repository and contact information
-
 ---
 
 ## 📧 Contact
