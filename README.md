@@ -41,6 +41,16 @@ pip install numpy>=1.21.0 torch>=2.0.0 onnxruntime>=1.14.0 matplotlib>=3.5.0 sea
 
 ### Data and Model Preparation
 
+The FengWu model is a state-of-the-art deep learning-based global weather forecasting system developed by the **OpenEarthLab** research team. It has demonstrated skillful forecasts beyond 10 days lead time, competing with and sometimes surpassing traditional numerical weather prediction (NWP) models. The model is built on a transformer-based architecture and is trained on 37 vertical levels of atmospheric data. For ease of use and real-time evaluation, the pre-trained model provided by the FengWu team is released with 13 vertical levels, making it compatible with operational analysis data.
+
+The official FengWu repository provides:
+- Pre-trained ONNX models (`fengwu_v1.onnx` and `fengwu_v2.onnx`)
+- Sample input data for inference
+- Comprehensive documentation on data format and model specifications
+- Inference code for generating weather forecasts
+
+For more technical details, please refer to the [FengWu paper on arXiv](https://arxiv.org/abs/2304.02948) and the [official FengWu GitHub repository](https://github.com/OpenEarthLab/FengWu).
+
 #### 1. Download the FengWu Model
 
 This framework is compatible with the transfer learning version of the FengWu model, which is fine-tuned with analysis data up to 2021.
