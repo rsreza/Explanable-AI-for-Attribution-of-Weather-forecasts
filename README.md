@@ -20,33 +20,63 @@ This code accompanies our paper: "Comparative Analysis of Explainable AI Methods
 - **6 XAI Methods** implemented: Finite Difference, SmoothGrad, Input×Gradient, Integrated Gradients, Occlusion Sensitivity, and Gradient SHAP
 - **Multi-perspective Analysis**: Variable importance, regional sensitivity, physical mechanism analysis, and vertical profiling
 - **Cross-method Comparison**: Correlation analysis, consensus identification, and statistical significance testing
-- **Visualizations**: plots with consistent styling
+- **Visualizations**: Publication-quality plots with consistent styling
 - **Comprehensive Outputs**: JSON summaries, CSV exports, and Markdown reports
 - **GPU Optimized**: CUDA support for fast computations
 
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
 ```bash
 # Clone the repository
 git clone https://github.com/rsreza/Explanable-AI-for-Attribution-of-Weather-forecasts.git
-cd fengwu-xai-framework
+cd Explanable-AI-for-Attribution-of-Weather-forecasts
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### Data Preparation
+### Data and Model Preparation
 
-Place your FengWu input files in the following structure:
+#### 1. Download the FengWu Model
+
+This framework is compatible with the transfer learning version of the FengWu model, which is fine-tuned with analysis data up to 2021.
+
+- **Model File:** `fengwu_v2.onnx`
+- **Description:** FengWu with transfer learning (finetuned with analysis data up to 2021).
+- **Download Link:** [Download fengwu_v2.onnx from OneDrive](https://pjlab-my.sharepoint.cn/:u:/g/personal/chenkang_pjlab_org_cn/EZkFM7nQcEtBve6MsqlWaeIB_lmpa__hX0I8QYOPzf-X6A)
+
+Place the downloaded model file in the root directory.
+
+#### 2. Download the Input Data
+
+You will need two input data files representing consecutive 6-hour atmospheric states.
+
+- **Files:** `input1.npy` and `input2.npy`
+- **Description:** Each file contains 69 atmospheric features on a 721x1440 latitude-longitude grid.
+- **Download Link:** [Download input data from Google Drive](https://drive.google.com/drive/folders/11i_l-mEQ7K5OcfbZd9jeBpfr_BGen9M0?usp=drive_link)
+
+Place the files in the following structure:
 
 ```
-input_data/
-├── input1.npy  # First time step (69 channels)
-└── input2.npy  # Second time step (69 channels)
+Explanable-AI-for-Attribution-of-Weather-forecasts/
+├── input_data/
+│   ├── input1.npy              # First time step (69x721x1440)
+│   └── input2.npy              # Second time step (69x721x1440)
+├── fengwu_v2.onnx              # FengWu model with transfer learning
+├── fengwu_xai_comprehensive.py # Main XAI analysis code
+├── README.md                   # This documentation
+└── LICENSE                     # MIT License
 ```
 
-Ensure the FengWu ONNX model file (`fengwu_v2.onnx`) is in the root directory.
+#### 3. Understanding the Input Data Format
+
+The data is organized as follows:
+- **Features (69)**: The first 4 are surface variables (`u10`, `v10`, `t2m`, `msl`). The remaining 65 are upper-level variables ordered as `z`, `q`, `u`, `v`, `t` across 13 pressure levels (`50`, `100`, `150`, ..., `1000` hPa).
+- **Spatial Dimensions**: The grid covers the globe with a resolution of 721 (latitude) x 1440 (longitude), ranging from 90°N to 90°S and 0° to 360°E.
 
 ### Run Analysis
 
@@ -57,41 +87,7 @@ python fengwu_xai_comprehensive.py
 # Custom configuration (edit CONFIG dict in the script)
 ```
 
-### Output Structure
-
-The framework generates a comprehensive output directory:
-
-```
-fengwu_xai_comprehensive_YYYYMMDD_HHMMSS/
-├── config.json
-├── paper_ready_summary.json
-├── EXECUTIVE_SUMMARY.md
-├── finite_difference/
-│   ├── enhanced_visualizations/
-│   │   ├── finite_difference_comprehensive_analysis.png
-│   │   └── variable_importance.csv
-│   └── data/
-│       ├── gradients.npy
-│       ├── gradient_magnitude.npy
-│       └── channel_importances.npy
-├── smoothgrad/
-│   └── [similar structure]
-├── input_x_gradient/
-│   └── [similar structure]
-├── integrated_gradients/
-│   └── [similar structure]
-├── occlusion/
-│   └── [similar structure]
-├── gradient_shap/
-│   └── [similar structure]
-└── cross_method_analysis/
-    ├── cross_method_comparison.png
-    ├── physical_consistency_analysis.png
-    ├── regional_sensitivity_analysis.png
-    ├── climate_implications.png
-    ├── method_correlations.csv
-    └── statistical_report.json
-```
+For more technical details, please refer to the [official FengWu repository](https://github.com/OpenEarthLab/FengWu).
 
 ---
 
@@ -160,6 +156,42 @@ fengwu_xai_comprehensive_YYYYMMDD_HHMMSS/
 - **Regional Sensitivity Matrix**: Heatmap of regional responses
 - **PCA Visualization**: Method similarity analysis
 
+### Output Structure
+
+The framework generates a comprehensive output directory:
+
+```
+fengwu_xai_comprehensive_YYYYMMDD_HHMMSS/
+├── config.json
+├── paper_ready_summary.json
+├── EXECUTIVE_SUMMARY.md
+├── finite_difference/
+│   ├── enhanced_visualizations/
+│   │   ├── finite_difference_comprehensive_analysis.png
+│   │   └── variable_importance.csv
+│   └── data/
+│       ├── gradients.npy
+│       ├── gradient_magnitude.npy
+│       └── channel_importances.npy
+├── smoothgrad/
+│   └── [similar structure]
+├── input_x_gradient/
+│   └── [similar structure]
+├── integrated_gradients/
+│   └── [similar structure]
+├── occlusion/
+│   └── [similar structure]
+├── gradient_shap/
+│   └── [similar structure]
+└── cross_method_analysis/
+    ├── cross_method_comparison.png
+    ├── physical_consistency_analysis.png
+    ├── regional_sensitivity_analysis.png
+    ├── climate_implications.png
+    ├── method_correlations.csv
+    └── statistical_report.json
+```
+
 ---
 
 ## 📝 Configuration
@@ -218,9 +250,6 @@ scipy >= 1.7.0
 scikit-learn >= 1.0.0
 ```
 
----
-
-
 ### Development Setup
 
 ```bash
@@ -237,20 +266,18 @@ black fengwu_xai_comprehensive.py
 mypy fengwu_xai_comprehensive.py
 ```
 
----
-
-#### Statistical Report
-- Method-wise statistics (mean, std, skewness, kurtosis)
-- Pairwise comparisons (correlation coefficients, p-values)
-- KL divergence for method similarity assessment
-- Top variable consistency metrics
-
 ### Interpreting Results
 
 1. **High Importance Score**: Variable strongly influences humidity prediction
 2. **Positive/Negative Gradient**: Directional influence on predicted humidity
 3. **Regional Sensitivity**: Areas where model is most responsive
 4. **Method Consensus**: Variables identified by multiple methods = robust importance
+
+### Statistical Report
+- Method-wise statistics (mean, std, skewness, kurtosis)
+- Pairwise comparisons (correlation coefficients, p-values)
+- KL divergence for method similarity assessment
+- Top variable consistency metrics
 
 ---
 
@@ -270,7 +297,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
 We extend our sincere gratitude to the **FengWu team (OpenEarthLab)** for developing and sharing their state-of-the-art weather forecasting model. Their work, detailed in the paper ["FengWu: Pushing Skillful Global Weather Forecasts beyond 10 Days Lead"](https://arxiv.org/abs/2304.02948), forms the foundation of this explainability framework.
 
@@ -281,15 +308,14 @@ We specifically thank them for:
 
 The official FengWu repository can be found at: [https://github.com/OpenEarthLab/FengWu](https://github.com/OpenEarthLab/FengWu)
 
-
 ---
 
 ## 📧 Contact
 
 For questions, issues, or collaborations:
-- **Lead Author**: [Reza Khandan] ([rs.reza_khandan@ut.ac.ir])
+- **Lead Author**: [Reza Khandan] ([rs.reza_khandan@ut.ac.ir](mailto:rs.reza_khandan@ut.ac.ir))
 
-
+---
 
 ## ⭐ Star History
 
@@ -298,20 +324,3 @@ If you find this framework useful, please consider starring the repository! ⭐
 ---
 
 **Made with ❤️ for climate science and AI interpretability**
-
----
-
-### Additional Files You Might Want:
-
-#### requirements.txt
-```txt
-numpy>=1.21.0
-torch>=2.0.0
-onnxruntime>=1.14.0
-matplotlib>=3.5.0
-seaborn>=0.11.0
-pandas>=1.3.0
-cartopy>=0.20.0
-scipy>=1.7.0
-scikit-learn>=1.0.0
-```
