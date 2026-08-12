@@ -35,9 +35,8 @@ This code accompanies our paper: "Comparative Analysis of Explainable AI Methods
 git clone https://github.com/rsreza/Explanable-AI-for-Attribution-of-Weather-forecasts.git
 cd Explanable-AI-for-Attribution-of-Weather-forecasts
 
-# Install dependencies
-pip install -r requirements.txt
-```
+# Install requirements mentioned below
+
 
 ### Data and Model Preparation
 
