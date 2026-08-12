@@ -266,24 +266,8 @@ scikit-learn >= 1.0.0
 ### Hardware Requirements
 
 - **GPU**: NVIDIA GPU with CUDA support (tested on NVIDIA A100 80GB)
-- **RAM**: Minimum 32GB recommended
+- **RAM**: Minimum 40GB recommended
 - **Storage**: ~10GB for model and data files
-
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/
-
-# Format code
-black fengwu_xai_comprehensive.py
-
-# Type checking
-mypy fengwu_xai_comprehensive.py
-```
 
 ### Interpreting Results
 
@@ -351,4 +335,3 @@ If you find this framework useful, please consider starring the repository! ⭐
 ---
 
 **Made with ❤️ for climate science and AI interpretability**
-```
