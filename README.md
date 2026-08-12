@@ -13,20 +13,17 @@
 
 The **FengWu XAI Comparison Framework** is a comprehensive explainability toolkit designed for the FengWu AI weather forecasting model. This framework implements and compares multiple state-of-the-art attribution methods to identify which atmospheric variables and regions most influence the model's predictions of 850hPa specific humidity.
 
-This code accompanies our paper: **"Understanding AI Weather Predictions: A Comparative XAI Study of the FengWu Model"** (submitted to *Journal of Climate*).
+This code accompanies our paper: "Comparative Analysis of Explainable AI Methods for Exploring the Attribution of Specific Humidity Forecasts based on the FengWu AI Weather Forecasting Model" (submitted to "Computers and Geosciences").
 
 ### 🎯 Key Features
 
 - **6 XAI Methods** implemented: Finite Difference, SmoothGrad, Input×Gradient, Integrated Gradients, Occlusion Sensitivity, and Gradient SHAP
 - **Multi-perspective Analysis**: Variable importance, regional sensitivity, physical mechanism analysis, and vertical profiling
 - **Cross-method Comparison**: Correlation analysis, consensus identification, and statistical significance testing
-- **Paper-ready Visualizations**: Publication-quality plots with consistent styling
+- **Visualizations**: plots with consistent styling
 - **Comprehensive Outputs**: JSON summaries, CSV exports, and Markdown reports
 - **GPU Optimized**: CUDA support for fast computations
 
----
-
-## 🚀 Quick Start
 
 ### Prerequisites
 
