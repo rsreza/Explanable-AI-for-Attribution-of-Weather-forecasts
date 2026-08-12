@@ -63,10 +63,11 @@ Place the downloaded model file in the root directory.
 
 #### 2. Download the Input Data
 
-You will need two input data files representing consecutive 6-hour atmospheric states.
+You will need two input data files representing consecutive 6-hour atmospheric states. These sample input files are provided by the official FengWu GitHub repository for testing and evaluation purposes.
 
 - **Files:** `input1.npy` and `input2.npy`
 - **Description:** Each file contains 69 atmospheric features on a 721x1440 latitude-longitude grid
+- **Source:** Sample data provided by the [official FengWu GitHub repository](https://github.com/OpenEarthLab/FengWu)
 - **Download Link:** [Download input data from Google Drive](https://drive.google.com/drive/folders/11i_l-mEQ7K5OcfbZd9jeBpfr_BGen9M0?usp=drive_link)
 
 #### 3. Directory Structure
@@ -350,3 +351,4 @@ If you find this framework useful, please consider starring the repository! ⭐
 ---
 
 **Made with ❤️ for climate science and AI interpretability**
+```
