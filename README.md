@@ -220,25 +220,6 @@ scikit-learn >= 1.0.0
 
 ---
 
-## 📚 Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-@article{yourname2026fengwu,
-  title={Understanding AI Weather Predictions: A Comparative XAI Study of the FengWu Model},
-  author={Your Name, Co-Author Names},
-  journal={Journal of Climate},
-  year={2026},
-  doi={10.XXXX/XXXX-XXXX-XXXX}
-}
-```
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Development Setup
 
