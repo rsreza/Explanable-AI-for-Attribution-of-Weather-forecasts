@@ -239,16 +239,6 @@ mypy fengwu_xai_comprehensive.py
 
 ---
 
-## 📖 Documentation
-
-### Understanding the Output
-
-#### Variable Importance CSV
-| Rank | Channel | Variable | Group | Importance | Normalized_Importance | Time_Step |
-|------|---------|----------|-------|------------|----------------------|-----------|
-| 1 | 137 | q850 | Moisture | 2.34e-3 | 0.156 | input2 |
-| 2 | 93 | z850 | Geopotential | 1.87e-3 | 0.125 | input2 |
-
 #### Statistical Report
 - Method-wise statistics (mean, std, skewness, kurtosis)
 - Pairwise comparisons (correlation coefficients, p-values)
@@ -280,32 +270,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgements
 
-- The FengWu team for the weather forecasting model
-- Our research collaborators at [Institution Name]
-- Funding sources: [Grant Information]
+We extend our sincere gratitude to the **FengWu team (OpenEarthLab)** for developing and sharing their state-of-the-art weather forecasting model. Their work, detailed in the paper ["FengWu: Pushing Skillful Global Weather Forecasts beyond 10 Days Lead"](https://arxiv.org/abs/2304.02948), forms the foundation of this explainability framework.
+
+We specifically thank them for:
+- Providing the pre-trained models (`fengwu_v1.onnx` and `fengwu_v2.onnx`) and making the inference code publicly available.
+- Offering clear documentation on the data format and model architecture.
+- Making their research accessible, which enables further studies on AI-based weather prediction interpretability.
+
+The official FengWu repository can be found at: [https://github.com/OpenEarthLab/FengWu](https://github.com/OpenEarthLab/FengWu)
+
 
 ---
 
 ## 📧 Contact
 
 For questions, issues, or collaborations:
-- **Lead Author**: [Your Name] ([email@domain.com](mailto:email@domain.com))
-- **GitHub Issues**: [Issues Page](https://github.com/yourusername/fengwu-xai-framework/issues)
-- **Paper Preprint**: [Link to arXiv or preprint]
+- **Lead Author**: [Reza Khandan] ([rs.reza_khandan@ut.ac.ir])
 
----
 
-## 📌 Quick Links
-
-- [Documentation](docs/)
-- [Examples](examples/)
-- [FAQ](FAQ.md)
-- [Changelog](CHANGELOG.md)
-- [Paper Preprint](https://arxiv.org/abs/XXXX.XXXXX)
-
----
 
 ## ⭐ Star History
 
@@ -331,38 +315,3 @@ cartopy>=0.20.0
 scipy>=1.7.0
 scikit-learn>=1.0.0
 ```
-
-#### CITATION.cff
-```yaml
-cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-authors:
-  - family-names: "YourName"
-    given-names: "YourFirstName"
-    orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
-title: "FengWu XAI Comparison Framework"
-version: 1.0.0
-date-released: 2026-08-12
-url: "https://github.com/yourusername/fengwu-xai-framework"
-```
-
-#### CONTRIBUTING.md
-```markdown
-# Contributing to FengWu XAI Framework
-
-We love your input! We want to make contributing to this project as easy and transparent as possible.
-
-## Development Process
-1. Fork the repo and create your branch from `main`
-2. Make your changes
-3. Ensure all tests pass
-4. Submit a pull request
-
-## Pull Request Guidelines
-- Update documentation for any new features
-- Add tests for new functionality
-- Follow existing code style
-- Reference relevant issues in PR description
-```
-
-This README provides a professional, comprehensive overview that will make your GitHub repository attractive to reviewers, readers, and other researchers who might want to reproduce or build upon your work.
