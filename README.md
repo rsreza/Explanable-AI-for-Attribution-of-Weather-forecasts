@@ -29,7 +29,7 @@ This code accompanies our paper: "Comparative Analysis of Explainable AI Methods
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fengwu-xai-framework.git
+git clone https://github.com/rsreza/Explanable-AI-for-Attribution-of-Weather-forecasts.git
 cd fengwu-xai-framework
 
 # Install dependencies
