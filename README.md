@@ -1,10 +1,3 @@
-# Complete README.md - Full Version
-
-Here is the complete, comprehensive README with all sections properly formatted:
-
----
-
-```markdown
 # 🌦️ FengWu XAI Comparison Framework
 ## Multi-Method Explainable AI for AI based Weather Prediction Models
 
@@ -347,17 +340,3 @@ If you find this framework useful, please consider starring the repository! ⭐
 ---
 
 **Made with ❤️ for climate science and AI interpretability**
-```
-
----
-
-## How to Update Your README
-
-1. **Go to your repository**: `https://github.com/rsreza/Explanable-AI-for-Attribution-of-Weather-forecasts`
-2. **Click the pencil icon** (✏️) on `README.md`
-3. **Delete all existing content**
-4. **Copy the entire README above**
-5. **Paste it** into the file
-6. **Scroll down** and click **"Commit changes"**
-
-This is the complete version with all sections properly formatted and the FengWu model acknowledgments fully addressed.
