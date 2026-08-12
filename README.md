@@ -22,7 +22,7 @@ This code accompanies our paper: "Comparative Analysis of Explainable AI Methods
 - **Cross-method Comparison**: Correlation analysis, consensus identification, and statistical significance testing
 - **Visualizations**: Publication-quality plots with consistent styling
 - **Comprehensive Outputs**: JSON summaries, CSV exports, and Markdown reports
-- **GPU Optimized**: CUDA support for fast computations
+- **GPU Optimized**: CUDA support for fast computations (tested on NVIDIA A100 80GB)
 
 ---
 
@@ -249,6 +249,12 @@ cartopy >= 0.20.0
 scipy >= 1.7.0
 scikit-learn >= 1.0.0
 ```
+
+### Hardware Requirements
+
+- **GPU**: NVIDIA GPU with CUDA support (tested on NVIDIA A100 80GB)
+- **RAM**: Minimum 32GB recommended
+- **Storage**: ~10GB for model and data files
 
 ### Development Setup
 
