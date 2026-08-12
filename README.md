@@ -35,5 +35,5 @@ This code accompanies our paper: *"Comparative Analysis of Explainable AI Method
 git clone https://github.com/rsreza/Explanable-AI-for-Attribution-of-Weather-forecasts.git
 cd Explanable-AI-for-Attribution-of-Weather-forecasts
 
-# Install requirements mentioned below
+# Install dependencies
 pip install numpy>=1.21.0 torch>=2.0.0 onnxruntime>=1.14.0 matplotlib>=3.5.0 seaborn>=0.11.0 pandas>=1.3.0 cartopy>=0.20.0 scipy>=1.7.0 scikit-learn>=1.0.0
