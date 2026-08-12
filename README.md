@@ -97,7 +97,7 @@ The data is organized as follows:
 # Basic execution
 python fengwu_xai_comprehensive.py
 
-# Custom configuration (edit CONFIG dict in the script)
+# Custom configuration (below)
 ```
 
 For more technical details, please refer to the [official FengWu repository](https://github.com/OpenEarthLab/FengWu).
@@ -248,25 +248,10 @@ CONFIG = {
 
 ---
 
-## 🔧 Requirements
-
-```
-python >= 3.8
-numpy >= 1.21.0
-torch >= 2.0.0
-onnxruntime >= 1.14.0
-matplotlib >= 3.5.0
-seaborn >= 0.11.0
-pandas >= 1.3.0
-cartopy >= 0.20.0
-scipy >= 1.7.0
-scikit-learn >= 1.0.0
-```
-
 ### Hardware Requirements
 
 - **GPU**: NVIDIA GPU with CUDA support (tested on NVIDIA A100 80GB)
-- **RAM**: Minimum 40GB recommended
+- **RAM**: Minimum 50GB recommended
 - **Storage**: ~10GB for model and data files
 
 ### Interpreting Results
